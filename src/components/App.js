@@ -7,7 +7,7 @@ const App = () => {
     <div>
       <BrowserRouter>
         <div>
-          <Route path="/productlist" exact component={ProductList} />
+          <Route path="/" exact component={ProductList} />
         </div>
       </BrowserRouter>
     </div>
