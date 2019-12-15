@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ProductCard from './ProductCard';
 
 async function fetchData(fnSuccess, fnError) {
-  const res = await fetch("https://jsonplaceholder.typicode.com/photos?albumId=1");
+  const res = await fetch("/products.json");
   res
     .json()
     .then(res => fnSuccess(res))
@@ -18,11 +18,11 @@ const ProductList = () => {
   }, []);
 
   return (
-    <div className="product-grid">
+    <ul className="product-grid">
       {
         products.map((p, index) => <ProductCard key={index} product={p} />)
       }
-    </div>
+    </ul>
   );
 };
 

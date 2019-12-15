@@ -1,0 +1,46 @@
+body {
+  font-family: system-ui, sans-serif;
+  text-align: center;
+  font-size: .6rem;
+}
+
+img {
+  width: 100%;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: .2rem;
+  list-style-type: none;
+  padding-left: 0;
+  justify-items: center;
+  justify-content: center;
+}
+
+.product-info {
+  display: grid;
+  
+  .product-description {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+  }
+  
+  .product-price {
+    display: flex;
+    justify-content: center;
+    
+    .product-price-reduced {
+      order: 1;
+      color: red;
+      margin-left: 10px;
+    
+      & + p {
+        text-decoration: line-through;
+      }
+    }
+  }
+}
+
